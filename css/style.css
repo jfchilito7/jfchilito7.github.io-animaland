@@ -1,0 +1,460 @@
+:root {
+    --brown-dark-bear: #C68D6D;
+    --brown-light-bear: #DD9F80;
+    --yellow-bear: #FFDAAA;
+    --inner-ear: #FFC477;
+    --nose-bear: #935B45;
+    --eyes-bear: #57565C;
+    --sky-bear: #9FF6FF;
+    --sky-dark-bear: #7DE7FF;
+    --sky-ligth-bear: #CCF8FF;
+    --montain-grass: #71ab72;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    counter-reset: score;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+input:checked {
+    counter-increment: score;
+}
+
+
+.phone {
+    position: relative;
+    width: 400px;
+    height: 700px;
+    border: 8px solid black;
+    border-radius: 40px;
+    background: #6bc5ed;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.layers {
+    position: absolute;
+}
+
+.layer-1 {
+    z-index: 1;
+    width: 80px;
+    height: 450px;
+    bottom: 0;
+    right: 90px;
+
+    animation-name: layer-bear;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes layer-bear {
+    0% {
+        bottom: 0;
+    }
+
+    25% {
+        bottom: -80px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+input[type=checkbox] {
+    appearance: none;
+    cursor: pointer;
+    height: 60px;
+    width: 80px;
+    position: absolute;
+    z-index: 3;
+}
+
+input[type=checkbox]:focus {
+    appearance: none;
+    outline: none;
+}
+
+
+
+.layer-2 {
+    z-index: 2;
+    width: 80px;
+    height: 450px;
+    bottom: 0;
+    left: 90px;
+
+    animation-name: layer-bear-2;
+    animation-duration: 1.7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes layer-bear-2 {
+    0% {
+        bottom: 0;
+    }
+
+    25% {
+        bottom: -80px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+    
+
+
+.layer-3 {
+    z-index: 3;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 310px;
+    height: 400px;
+    background: #c27859;
+    bottom: 0 ;
+    border-radius: 40px;
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.5);
+    background-image:  linear-gradient(135deg, #71ab72 25%, transparent 25%), linear-gradient(225deg, #71ab72 25%, transparent 25%);
+    background-position:  25px 0, 25px 0, 0 0, 0 0;
+    background-size: 50px 100px;
+    background-repeat: repeat-x;
+}
+
+.layer-4 {
+    z-index: 4;
+    width: 80px;
+    height: 350px;
+    bottom: 0;
+    left: 55px;
+
+    animation-name: layer-bear-3;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+
+@keyframes layer-bear-3 {
+    0% {
+        bottom: 0;
+    }
+
+    25% {
+        bottom: -80px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+
+
+.layer-5 {
+    z-index: 5;
+    width: 255px;
+    height: 305px;
+    background: #c27859;
+    bottom: 0 ;
+    border-radius: 45px;
+    box-shadow: 5px 0 10px 0 rgba(0, 0, 0, 0.5);
+    background-image:  linear-gradient(135deg, #71ab72 25%, transparent 25%), linear-gradient(225deg, #71ab72 25%, transparent 25%);
+    background-position:  25px 0, 25px 0, 0 0, 0 0;
+    background-size: 50px 100px;
+    background-repeat: repeat-x;
+}
+
+.layer-6 {
+    z-index: 6;
+    width: 80px;
+    height: 255px;
+    bottom: 0;
+    right: 55px;
+
+    animation-name: layer-bear-4;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes layer-bear-4 {
+    0% {
+        bottom: 0;
+    }
+
+    25% {
+        bottom: -80px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+.layer-7 {
+    z-index: 7;
+    width: 255px;
+    height: 210px;
+    background: #c27859;
+    bottom: 0 ;
+    right: 0px;
+    border-radius: 45px;
+    box-shadow: -5px 0 10px 0 rgba(0, 0, 0, 0.5);
+    background-image:  linear-gradient(135deg, #71ab72 25%, transparent 25%), linear-gradient(225deg, #71ab72 25%, transparent 25%);
+    background-position:  25px 0, 25px 0, 0 0, 0 0;
+    background-size: 50px 100px;
+    background-repeat: repeat-x;
+}
+
+.layer-8 {
+    z-index: 8;
+    width: 200px;
+    height: 145px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 0;
+}
+
+.layer-8::before {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 70%;
+    background: #71ab72;
+    bottom: 0;
+    left: 0;
+    border-radius: 100px 100px 10px 20px;
+}
+
+.layer-8::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 70%;
+    background: #71ab72;
+    bottom: 0;
+    right: 0;
+    border-radius: 100px 100px 20px 10px;
+}
+
+.grass {
+    position: absolute;
+    width: 40%;
+    height: 90%;
+    bottom: 0;
+    left: 30%;
+    background-color: #71ab72;
+    border-radius: 100px 100px 10px 20px;
+}
+
+.layer-9 {
+    z-index: 9;
+    width: 130px;
+    height: 100px;
+    bottom: 0;
+    right: 0;
+}
+
+.layer-9::before {
+    content: "";
+    position: absolute;
+    width: 75%;
+    height: 100%;
+    background: white;
+    bottom: 0;
+    right: 0;
+    border-radius: 100px 100px 70px 10px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+.layer-9::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 60%;
+    background: white;
+    bottom: 0;
+    left: 0;
+    border-radius: 100px 100px 10px 110px;
+}
+
+.layer-10 {
+    z-index: 10;
+    width: 130px;
+    height: 100px;;
+    bottom: 0;
+    left: 0;
+}
+
+.layer-10::before {
+    content: "";
+    position: absolute;
+    width: 75%;
+    height: 100%;
+    background: white;
+    bottom: 0;
+    left: 0;
+    border-radius: 100px 100px 10px 70px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+.layer-10::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 60%;
+    background: white;
+    bottom: 0;
+    right: 0;
+    border-radius: 100px 100px 110px 10px;
+}
+
+.head {
+    background: linear-gradient(90deg, #f3f3f3 50%, #e0e0e0 50%);
+    width: 80px;
+    height: 110px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.head-copy {
+    background: linear-gradient(90deg, #f3f3f3 50%, #e0e0e0 50%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.mouth {
+    background-color: var(--yellow-bear);
+    position: relative;
+    border-radius: 50%;
+    width: 45%;
+    height: 30%;
+    left: 28%;
+    top: 22%;
+    z-index: 3;
+}
+
+.nose {
+    background-color: #ffa9ce;
+    border-radius: 50%;
+    position: relative;
+    width: 40%;
+    height: 32%;
+    left: 30%;
+    top: 0px;
+}
+
+.eye-rigth {
+    background-color: var(--eyes-bear);
+    width: 5px;
+    height: 9px;
+    position: absolute;
+    border-radius: 5px;
+    z-index: 3;
+    right: 27%;
+    top: 15px;
+
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.eye-left {
+    background-color: var(--eyes-bear);
+    width: 5px;
+    height: 9px;
+    position: absolute;
+    border-radius: 5px;
+    z-index: 3;
+    left: 27%;
+    top: 15px;
+
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+    0% {
+        height: 9px;
+    }
+
+    5% {
+        transform: translate(0, 2px);
+        height: 3px;
+    }
+
+    10% {
+        transform: translate(0, 0);
+        height: 9px;
+    }
+}
+
+.ear-left {
+    width: 32%;
+    height: 32%;
+    position: absolute;
+    background-color: #dfe5de;
+    border-radius: 50%;
+    top: 0;
+    z-index: 1;
+}
+
+.ear-right {
+    width: 32%;
+    height: 32%;
+    position: absolute;
+    background-color: #dfe5de;
+    border-radius: 50%;
+    right: 0px;
+    top: 0;
+    z-index: 1;
+}
+
+.enner-ear {
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+    background-color: #bec0bd;
+    top: 20%;
+    left: 25%;
+    position: absolute;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    margin: 45px 0 14px;
+}
+
+.title img {
+    width: 60%;
+}
+
+.score {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #a64935;
+    text-align: center;
+}
+
+.score::after {
+    content: counter(score);
+}
